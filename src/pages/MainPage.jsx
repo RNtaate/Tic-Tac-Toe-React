@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
 import WinDraw from '../components/WinDraw';
+import RestartGameComponent from '../components/RestartGameComponent';
 
 const MainPage = () => {
   const context = useContext(TicContext);
@@ -11,6 +12,7 @@ const MainPage = () => {
     return (
       <>
         <WinDraw />
+        <RestartGameComponent />
       </>
     );
   }
