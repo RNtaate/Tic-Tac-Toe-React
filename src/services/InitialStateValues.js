@@ -3,7 +3,7 @@ const initialStateValues = {
   player2Moves: [],
   combinedMoves: [],
   currentMove: '',
-  player1Turn: false,
+  player1Turn: true,
   player1Win: false,
   player2Win: false,
   draw: false,
