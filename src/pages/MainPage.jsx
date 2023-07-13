@@ -1,10 +1,19 @@
 import React, { useContext } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
+import WinDraw from '../components/WinDraw';
 
 const MainPage = () => {
   const context = useContext(TicContext);
-  const { players } = context;
+  const { players, player1Win, player2Win, draw } = context;
+
+  if (player1Win || player2Win || draw) {
+    return (
+      <>
+        <WinDraw />
+      </>
+    );
+  }
 
   return (
     <div>
