@@ -43,6 +43,14 @@ const TicContextProvider = ({ children }) => {
     player1Win,
     player2Win,
     draw,
+    setPlayer1Moves,
+    setPlayer2Moves,
+    setCombinedMoves,
+    setCurrentMove,
+    setPlayer1Turn,
+    setPlayer1Win,
+    setPlayer2Win,
+    setDraw,
   };
 
   return (
