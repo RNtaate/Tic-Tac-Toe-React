@@ -18,7 +18,6 @@ const Tile = ({ tileNumber }) => {
   const makeSelection = (e) => {
     e.stopPropagation();
     let currentId = e.target.id.toString();
-    console.log('This is the div that you clicked with id: ', currentId);
     setCombinedMoves((prev) => {
       return {
         ...prev,
@@ -41,7 +40,6 @@ const Tile = ({ tileNumber }) => {
   };
 
   const SymbolComponent = ({ player }) => {
-    console.log('You have reached the symbol component with player: ', player);
     return <div className={styles.symbolDiv}>{playerSymbols[player]}</div>;
   };
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
 import WinDraw from '../components/WinDraw';
@@ -42,9 +42,7 @@ const MainPage = () => {
         if (player2WinChecker) setPlayer2Win(player2WinChecker);
       } else {
         // check for player 1 win
-        console.log('You reached the checking of the win for player 1');
         player1WinChecker = winChecker(player1Moves);
-        if (player1WinChecker) console.log('Player1 should win');
         if (player1WinChecker) setPlayer1Win(player1WinChecker);
       }
 
