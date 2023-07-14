@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
+import styles from '../styles/Tile.module.css';
 
 const Tile = ({ tileNumber }) => {
   const context = useContext(TicContext);
@@ -20,7 +21,7 @@ const Tile = ({ tileNumber }) => {
 
   const SymbolComponent = ({ player }) => {
     console.log('You have reached the symbol component with player: ', player);
-    return <div>{playerSymbols[player]}</div>;
+    return <div className={styles.symbolDiv}>{playerSymbols[player]}</div>;
   };
 
   return (
@@ -28,7 +29,11 @@ const Tile = ({ tileNumber }) => {
       {combinedMoves[tileNumber.toString()] ? (
         <SymbolComponent player={combinedMoves[tileNumber.toString()]} />
       ) : (
-        <div id={tileNumber} onClick={makeSelection}>
+        <div
+          id={tileNumber}
+          onClick={makeSelection}
+          className={styles.unchosenTileDiv}
+        >
           {tileNumber} unchosen tile
         </div>
       )}

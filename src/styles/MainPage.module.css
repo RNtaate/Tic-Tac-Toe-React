@@ -1,0 +1,7 @@
+.gameBoardDiv {
+  display: grid;
+  min-width: 320px;
+  max-width: 600px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}

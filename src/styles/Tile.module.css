@@ -1,0 +1,14 @@
+.symbolDiv,
+.unchosenTileDiv {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--text-primary);
+}
+
+.symbolDiv {
+  cursor: not-allowed;
+}
+
+.unchosenTileDiv {
+  cursor: pointer;
+}
