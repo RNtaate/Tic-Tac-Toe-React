@@ -5,8 +5,13 @@ import styles from '../styles/Tile.module.css';
 
 const Tile = ({ tileNumber }) => {
   const context = useContext(TicContext);
-  const { combinedMoves, playerSymbols, setCombinedMoves, player1Turn } =
-    context;
+  const {
+    combinedMoves,
+    playerSymbols,
+    setCombinedMoves,
+    player1Turn,
+    setPlayer1Turn,
+  } = context;
 
   const makeSelection = (e) => {
     e.stopPropagation();
@@ -17,6 +22,9 @@ const Tile = ({ tileNumber }) => {
         [e.target.id.toString()]: player1Turn ? 'player1' : 'player2',
       };
     });
+
+    // This inclusion leads to only one re-render cycle of the overall gameboard, once per tile hence leading to improved performance.
+    setPlayer1Turn(!player1Turn);
   };
 
   const SymbolComponent = ({ player }) => {
