@@ -6,7 +6,7 @@ const WinDraw = () => {
   const context = useContext(TicContext);
   const { players, player1Win, player2Win, draw } = context;
 
-  const playerResultReturn = (player) => {
+  const PlayerResultReturn = ({ player }) => {
     let playerName = players[player.toString()];
     return (
       <div>
@@ -16,9 +16,9 @@ const WinDraw = () => {
   };
 
   if (player1Win) {
-    return playerResultReturn('player1');
+    return <PlayerResultReturn player={'player1'} />;
   } else if (player2Win) {
-    return playerResultReturn('player2');
+    return <PlayerResultReturn player={'player2'} />;
   }
 
   return (
