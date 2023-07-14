@@ -3,8 +3,11 @@ import React, { useContext } from 'react';
 import { TicContext } from '../context/TicContextProvider';
 import WinDraw from '../components/WinDraw';
 import RestartGameComponent from '../components/RestartGameComponent';
+import Tile from '../components/Tile';
 
 const MainPage = () => {
+  const NUMBEROFTILES = new Array(9).fill(null);
+
   const context = useContext(TicContext);
   const { players, player1Win, player2Win, draw } = context;
 
@@ -19,8 +22,10 @@ const MainPage = () => {
 
   return (
     <div>
-      <h3>PLAYER ONE : {players.player1} </h3>
-      <h3>PLAYER TWO : {players.player2} </h3>
+      {NUMBEROFTILES.map((tile, index) => {
+        let tileKey = index.toString();
+        return <Tile tileNumber={index + 1} key={tileKey} />;
+      })}
     </div>
   );
 };
