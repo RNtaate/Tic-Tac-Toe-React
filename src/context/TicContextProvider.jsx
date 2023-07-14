@@ -28,7 +28,7 @@ const TicContextProvider = ({ children }) => {
     initialStateValues.currentMove
   );
   const [player1Turn, setPlayer1Turn] = useState(true);
-  const [player1Win, setPlayer1Win] = useState(true);
+  const [player1Win, setPlayer1Win] = useState(initialStateValues.player1Win);
   const [player2Win, setPlayer2Win] = useState(initialStateValues.player2Win);
   const [draw, setDraw] = useState(initialStateValues.draw);
 
