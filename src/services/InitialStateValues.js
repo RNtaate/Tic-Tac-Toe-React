@@ -1,7 +1,7 @@
 const initialStateValues = {
   player1Moves: [],
   player2Moves: [],
-  combinedMoves: [],
+  combinedMoves: {},
   currentMove: '',
   player1Turn: true,
   player1Win: false,
