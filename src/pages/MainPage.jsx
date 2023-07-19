@@ -66,7 +66,7 @@ const MainPage = () => {
   }
 
   return (
-    <div>
+    <div className={styles.gameSectionContainerDiv}>
       <p>{player1Turn ? players['player1'] : players['player2']}, Your turn!</p>
       <div className={styles.gameBoardDiv}>
         {NUMBEROFTILES.map((tile, index) => {

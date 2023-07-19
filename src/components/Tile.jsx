@@ -52,7 +52,13 @@ const Tile = ({ tileNumber }) => {
   };
 
   return (
-    <div>
+    <div
+      className={styles.tileContainerDiv}
+      style={{
+        backgroundColor:
+          parseInt(tileNumber) % 2 != 0 ? 'var(--bg-secondary)' : 'transparent',
+      }}
+    >
       {combinedMoves[tileNumber.toString()] ? (
         <SymbolComponent player={combinedMoves[tileNumber.toString()]} />
       ) : (
