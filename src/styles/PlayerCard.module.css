@@ -1,0 +1,24 @@
+.playerCardContainerDiv {
+  color: var(--text-white);
+  position: relative;
+}
+
+.yourTurnSpan {
+  position: absolute;
+  width: 200%;
+  opacity: 0;
+  left: 0;
+  top: -50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.turnActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.playerSymbolDiv {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+}
