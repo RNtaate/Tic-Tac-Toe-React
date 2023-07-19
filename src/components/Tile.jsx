@@ -61,7 +61,14 @@ const Tile = ({ tileNumber }) => {
           onClick={makeSelection}
           className={styles.unchosenTileDiv}
         >
-          {tileNumber} unchosen tile
+          <div
+            className={styles.expectedSymbolDiv}
+            style={{
+              backgroundImage: player1Turn
+                ? `url(${playerSymbols.player1})`
+                : `url(${playerSymbols.player2})`,
+            }}
+          ></div>
         </div>
       )}
     </div>
