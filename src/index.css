@@ -6,6 +6,8 @@
   --bg-lighter: #444;
   --bg-light: #aaa;
   --bg-yellow: rgb(254, 214, 82);
+  --blue-primary: rgb(42, 171, 252);
+  --pink-primary: rgb(238, 80, 123);
 
   --h1-font-size: 3.2em;
   --h2-font-size: 3em;
@@ -50,6 +52,14 @@ img {
   height: auto;
   object-fit: contain;
   object-position: center;
+}
+
+button {
+  outline: none;
+  padding: 0.5em 1.5em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 body {
