@@ -1,5 +1,11 @@
 :root {
   --text-primary: #213547;
+  --text-letter: rgb(215, 216, 216);
+  --bg-primary: rgb(37, 39, 42);
+  --bg-secondary: rgb(34, 36, 39);
+  --bg-lighter: #888;
+  --bg-light: #aaa;
+  --bg-yellow: rgb(254, 214, 82);
 
   --h1-font-size: 3.2em;
   --h2-font-size: 3em;
@@ -19,6 +25,22 @@
   padding: 0;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 h1 {
   font-size: var(--h1-font-size);
 }
@@ -33,4 +55,5 @@ img {
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
