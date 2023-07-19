@@ -1,6 +1,8 @@
 import React, { useState, createContext } from 'react';
 
 import initialStateValues from '../services/InitialStateValues';
+import xSymbol from '../assets/tic-x.svg';
+import ySymbol from '../assets/tic-circle.svg';
 
 export const TicContext = createContext();
 
@@ -10,9 +12,14 @@ const TicContextProvider = ({ children }) => {
     player2: 'SHARON',
   };
 
+  // const playerSymbols = {
+  //   player1: 'X',
+  //   player2: 'O',
+  // };
+
   const playerSymbols = {
-    player1: 'X',
-    player2: 'O',
+    player1: xSymbol,
+    player2: ySymbol,
   };
 
   const [player1Moves, setPlayer1Moves] = useState(

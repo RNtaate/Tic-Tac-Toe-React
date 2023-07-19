@@ -40,7 +40,15 @@ const Tile = ({ tileNumber }) => {
   };
 
   const SymbolComponent = ({ player }) => {
-    return <div className={styles.symbolDiv}>{playerSymbols[player]}</div>;
+    return (
+      <div className={styles.symbolDiv}>
+        <img
+          alt="symbol"
+          src={playerSymbols[player]}
+          className={styles.symbolCompImg}
+        />
+      </div>
+    );
   };
 
   return (
