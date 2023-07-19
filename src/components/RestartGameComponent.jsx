@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
 import initialStateValues from '../services/InitialStateValues';
+import styles from '../styles/RestartGameComponent.module.css';
 
 const RestartGameComponent = () => {
   const context = useContext(TicContext);
@@ -28,8 +29,14 @@ const RestartGameComponent = () => {
   };
 
   return (
-    <div>
-      <button type="button" onClick={restartGame}>
+    <div
+      className={`${styles.restartGameContainerDiv} d-flex justify-content-center align-items-center`}
+    >
+      <button
+        type="button"
+        onClick={restartGame}
+        className={styles.restartGameButton}
+      >
         Restart Game
       </button>
     </div>
