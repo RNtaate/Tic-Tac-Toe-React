@@ -1,12 +1,17 @@
 .symbolDiv,
 .unchosenTileDiv {
-  width: 100%;
-  height: auto;
   border: 1px solid var(--text-primary);
+  min-width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .symbolDiv {
   cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .unchosenTileDiv {

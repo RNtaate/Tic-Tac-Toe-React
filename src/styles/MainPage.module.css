@@ -1,7 +1,12 @@
+:root {
+  --min-dimension: 320px;
+  --max-dimension: 400px;
+}
+
 .gameBoardDiv {
   display: grid;
-  min-width: 320px;
-  max-width: 600px;
-  width: 100%;
+  min-width: var(--min-dimension);
+  max-width: var(--max-dimension);
+  aspect-ratio: 1 / 1;
   grid-template-columns: repeat(3, 1fr);
 }
