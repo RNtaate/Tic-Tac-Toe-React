@@ -10,15 +10,29 @@ const PlayerCard = ({ playerKey, isYourTurn }) => {
   const playerName = players[playerKey];
 
   return (
-    <div className={styles.playerCardContainerDiv}>
+    <div
+      className={`${styles.playerCardContainerDiv} d-flex flex-col justify-content-center align-items-center`}
+      style={{
+        backgroundColor: isYourTurn
+          ? 'var(--bg-lighter'
+          : 'var(--bg-secondary)',
+      }}
+    >
       <span
         className={`${styles.yourTurnSpan} ${
           isYourTurn ? styles.turnActive : ''
-        }`}
+        } d-flex align-items-center justify-content-center`}
       >
-        <h5>Your turn!</h5>
+        <span>
+          <i className="fa-solid fa-angle-right"></i>
+        </span>
+        <h3>Your turn!</h3>
       </span>
-      <p>{playerName}</p>
+
+      <span>
+        <i className="fa-solid fa-user"></i>
+      </span>
+      <h5 className={styles.playerCardName}>{playerName}</h5>
       <div className={styles.playerSymbolDiv}>
         <img alt="symbol" src={imageSymbol} />
       </div>

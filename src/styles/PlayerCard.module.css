@@ -1,16 +1,28 @@
+:root {
+  --card-width: 120px;
+}
+
 .playerCardContainerDiv {
   color: var(--text-white);
   position: relative;
+  padding: 1.5em 2em;
+  min-width: var(--card-width);
+  max-width: var(--card-width);
+  width: 100%;
+  border-radius: 20px;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .yourTurnSpan {
   position: absolute;
   width: 200%;
   opacity: 0;
-  left: 0;
+  left: -50%;
   top: -50%;
   transform: translateX(-50%);
   transition: all 0.4s ease-in-out;
+  gap: 10px;
+  z-index: -1;
 }
 
 .turnActive {
@@ -18,7 +30,11 @@
   transform: translateX(0);
 }
 
+.playerCardName {
+  margin: 15px 0;
+}
+
 .playerSymbolDiv {
-  width: 30px;
+  width: 20px;
   aspect-ratio: 1 / 1;
 }
