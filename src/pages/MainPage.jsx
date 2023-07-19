@@ -6,6 +6,7 @@ import RestartGameComponent from '../components/RestartGameComponent';
 import Tile from '../components/Tile';
 import styles from '../styles/MainPage.module.css';
 import winChecker from '../helpers/winChecker';
+import PlayerCard from '../components/PlayerCard';
 
 const MainPage = () => {
   const NUMBEROFTILES = new Array(9).fill(null);
@@ -67,13 +68,14 @@ const MainPage = () => {
 
   return (
     <div className={styles.gameSectionContainerDiv}>
-      <p>{player1Turn ? players['player1'] : players['player2']}, Your turn!</p>
+      <PlayerCard playerKey={'player1'} isYourTurn={player1Turn} />
       <div className={styles.gameBoardDiv}>
         {NUMBEROFTILES.map((tile, index) => {
           let tileKey = index.toString();
           return <Tile tileNumber={index + 1} key={tileKey} />;
         })}
       </div>
+      <PlayerCard playerKey={'player2'} isYourTurn={!player1Turn} />
     </div>
   );
 };
