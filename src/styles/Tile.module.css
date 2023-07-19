@@ -1,9 +1,12 @@
 .symbolDiv,
 .unchosenTileDiv {
-  border: 1px solid var(--text-primary);
   min-width: 100%;
   max-width: 100%;
   aspect-ratio: 1/1;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .symbolDiv {
@@ -11,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .unchosenTileDiv {
