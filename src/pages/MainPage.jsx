@@ -59,10 +59,16 @@ const MainPage = () => {
 
   if (player1Win || player2Win || draw) {
     return (
-      <>
-        <WinDraw />
-        <RestartGameComponent />
-      </>
+      <section
+        className={`${styles.resultSection} d-flex align-items-center justify-content-center`}
+      >
+        <div
+          className={`${styles.resultContainerDiv} d-flex align-items-center justify-content-center flex-col`}
+        >
+          <WinDraw />
+          <RestartGameComponent />
+        </div>
+      </section>
     );
   }
 

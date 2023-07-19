@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import { TicContext } from '../context/TicContextProvider';
+import styles from '../styles/WinDraw.module.css';
 
 const WinDraw = () => {
   const context = useContext(TicContext);
@@ -9,8 +10,8 @@ const WinDraw = () => {
   const PlayerResultReturn = ({ player }) => {
     let playerName = players[player.toString()];
     return (
-      <div>
-        <p>{playerName} WINS 🎉🎉🎉 </p>
+      <div className={styles.playerResultDiv}>
+        <h3>{playerName} WINS 🎉🎉🎉 </h3>
       </div>
     );
   };
@@ -22,8 +23,8 @@ const WinDraw = () => {
   }
 
   return (
-    <div>
-      <p>IT IS A DRAW!</p>
+    <div className={styles.playerResultDiv}>
+      <h3>IT IS A DRAW</h3>
     </div>
   );
 };
