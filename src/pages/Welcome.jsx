@@ -1,12 +1,14 @@
 import React from 'react';
 
 import styles from '../styles/Welcome.module.css';
+import PlayerRegForm from '../components/PlayerRegForm';
 
 const Welcome = () => {
   return (
     <section
       className={`${styles.welcomeMainSection} d-flex justify-content-center align-items-center`}
     >
+      <PlayerRegForm />
       <div
         className={`${styles.welcomeContainerDiv} d-flex justify-content-center align-items-center flex-col`}
       >
