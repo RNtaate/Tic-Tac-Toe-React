@@ -27,9 +27,16 @@ const PlayerRegForm = ({ setShowForm }) => {
       className={`${mainPageStyles.resultSection} ${styles.formBackdropSection} d-flex justify-content-center align-items-center`}
       onClick={(e) => setShowForm(false)}
     >
-      <div className="formContainerDiv" onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`${styles.formContainerDiv} d-flex flex-col align-items-center`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <h3>Please enter the players' names here</h3>
-        <form action="#" onSubmit={handleSettingPlayerNames}>
+        <form
+          action="#"
+          onSubmit={handleSettingPlayerNames}
+          className={`${styles.playersForm} d-flex flex-col align-items-center`}
+        >
           <input
             type="text"
             placeholder="Player 1's name"
@@ -44,10 +51,20 @@ const PlayerRegForm = ({ setShowForm }) => {
             autoComplete="off"
             onChange={(e) => setPlayer2Name(e.target.value)}
           />
-          <button type="submit">Submit</button>
-          <button type="button" onClick={() => setShowForm(false)}>
-            Cancel
-          </button>
+          <div
+            className={`${styles.formButtonsDiv} d-flex justify-content-center align-items-center`}
+          >
+            <button type="submit" className={styles.submitButton}>
+              Submit
+            </button>
+            <button
+              type="button"
+              className={styles.cancelButton}
+              onClick={() => setShowForm(false)}
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
     </section>
