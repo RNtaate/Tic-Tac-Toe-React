@@ -1,6 +1,7 @@
 .formBackdropSection {
   background-color: rgba(37, 39, 42, 0.7);
   overflow: hidden;
+  z-index: 999;
 }
 
 .formContainerDiv {
