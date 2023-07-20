@@ -7,15 +7,10 @@ import ySymbol from '../assets/tic-circle.svg';
 export const TicContext = createContext();
 
 const TicContextProvider = ({ children }) => {
-  const players = {
-    player1: 'ROY',
-    player2: 'SHARON',
-  };
-
-  // const playerSymbols = {
-  //   player1: 'X',
-  //   player2: 'O',
-  // };
+  const [players, setPlayers] = useState({
+    player1: '',
+    player2: '',
+  });
 
   const playerSymbols = {
     player1: xSymbol,
@@ -50,6 +45,7 @@ const TicContextProvider = ({ children }) => {
     player1Win,
     player2Win,
     draw,
+    setPlayers,
     setPlayer1Moves,
     setPlayer2Moves,
     setCombinedMoves,
