@@ -64,6 +64,6 @@ button {
 
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: var(--text-primary);
+  color: var(--text-white);
   background-color: var(--bg-primary);
 }
