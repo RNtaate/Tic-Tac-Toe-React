@@ -13,8 +13,13 @@
   font-weight: 200;
 }
 
-.welcomeStartButton {
-  padding: 1em 3em;
+.welcomeButtonsConatiner {
+  gap: 20px;
+}
+
+.welcomeStartButton,
+.welcomeContinueButton {
+  padding: 1em 2em;
   background: var(--blue-primary);
   border-radius: 5px;
   color: white;
@@ -26,11 +31,20 @@
   transition: all 0.2s ease-in-out;
 }
 
-.welcomeStartButton:hover {
+.welcomeContinueButton {
+  background-color: var(--pink-primary);
+}
+
+.welcomeStartButton:hover,
+.welcomeContinueButton:hover {
   outline: 2px solid var(--blue-primary);
   outline-offset: 5px;
   box-shadow: none;
   background: transparent;
+}
+
+.welcomeContinueButton:hover {
+  outline: 2px solid var(--pink-primary);
 }
 
 .chosenPlayersContainer {

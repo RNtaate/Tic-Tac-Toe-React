@@ -30,13 +30,24 @@ const Welcome = () => {
         className={`${styles.welcomeContainerDiv} d-flex justify-content-center align-items-center flex-col`}
       >
         <h1 className={styles.welcomeHeading}>WELCOME TO NORP'S TIC-TAC-TOE</h1>
-        <button
-          type="button"
-          className={styles.welcomeStartButton}
-          onClick={() => setShowForm(true)}
+
+        <div
+          className={`${styles.welcomeButtonsConatiner} d-flex justify-content-center align-items-center`}
         >
-          START
-        </button>
+          <button
+            type="button"
+            className={styles.welcomeStartButton}
+            onClick={() => setShowForm(true)}
+          >
+            {players.player1 && players.player2 ? 'CHANGE NAMES' : 'START'}
+          </button>
+
+          {players.player1 && players.player2 && (
+            <button type="button" className={`${styles.welcomeContinueButton}`}>
+              CONTINUE
+            </button>
+          )}
+        </div>
 
         {players.player1 && players.player2 && (
           <div
