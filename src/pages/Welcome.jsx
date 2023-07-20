@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import styles from '../styles/Welcome.module.css';
 import PlayerRegForm from '../components/PlayerRegForm';
 import { TicContext } from '../context/TicContextProvider';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   const [showForm, setShowForm] = useState(false);
@@ -43,9 +44,14 @@ const Welcome = () => {
           </button>
 
           {players.player1 && players.player2 && (
-            <button type="button" className={`${styles.welcomeContinueButton}`}>
-              CONTINUE
-            </button>
+            <Link to="/main" className={styles.playLink}>
+              <button
+                type="button"
+                className={`${styles.welcomeContinueButton}`}
+              >
+                CONTINUE
+              </button>
+            </Link>
           )}
         </div>
 

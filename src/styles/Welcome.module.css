@@ -17,11 +17,16 @@
   gap: 20px;
 }
 
+.playLink,
+.welcomeStartButton,
+.welcomeContinueButton {
+  min-width: 100%;
+  max-width: 100%;
+}
+
 .welcomeStartButton,
 .welcomeContinueButton {
   padding: 0.5em 2em;
-  min-width: 100%;
-  max-width: 100%;
   background: var(--blue-primary);
   border-radius: 5px;
   color: white;

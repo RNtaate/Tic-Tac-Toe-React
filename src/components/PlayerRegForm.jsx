@@ -16,8 +16,8 @@ const PlayerRegForm = ({ setShowForm }) => {
     if (!player1Name || !player2Name) return;
 
     setPlayers({
-      player1: player1Name,
-      player2: player2Name,
+      player1: player1Name.toUpperCase(),
+      player2: player2Name.toUpperCase(),
     });
     setShowForm(false);
   };
