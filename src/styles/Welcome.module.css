@@ -1,0 +1,36 @@
+.welcomeMainSection {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.welcomeContainerDiv {
+  gap: 30px;
+}
+
+.welcomeHeading {
+  font-weight: 200;
+}
+
+.welcomeStartButton {
+  padding: 1em 3em;
+  background: var(--blue-primary);
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+  outline-offset: 0;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.welcomeStartButton:hover {
+  border: 2px solid var(--pink-primary);
+  outline: 2px solid var(--blue-primary);
+  outline-offset: 5px;
+  box-shadow: none;
+  background: var(--pink-primary);
+}
