@@ -20,9 +20,9 @@
 
 - [Tic Tac Toe](https://norp-tictactoe.netlify.app/)
 
-### Screenshots
+### Demo Video
 
-- _**Coming Soon**_
+https://github.com/RNtaate/Tic-Tac-Toe-React/assets/42064746/4078f811-5209-4530-b6bd-2f9e82befa00
 
 ## Get started on local machine
 
