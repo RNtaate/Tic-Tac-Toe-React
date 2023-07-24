@@ -57,32 +57,37 @@ const MainPage = () => {
     }
   }, [combinedMoves]);
 
-  if (player1Win || player2Win || draw) {
-    return (
-      <section
-        className={`${styles.resultSection} d-flex align-items-center justify-content-center`}
-      >
-        <div
-          className={`${styles.resultContainerDiv} d-flex align-items-center justify-content-center flex-col`}
-        >
-          <WinDraw />
-          <RestartGameComponent />
-        </div>
-      </section>
-    );
-  }
+  const ResultForeDrop = () => {
+    if (player1Win || player2Win || draw) {
+      return (
+        <section className={`${styles.resultSection} d-flex`}>
+          <div
+            className={`${styles.resultContainerDiv} d-flex align-items-center justify-content-center flex-col`}
+          >
+            <WinDraw />
+            <RestartGameComponent />
+          </div>
+        </section>
+      );
+    }
+
+    return null;
+  };
 
   return (
-    <div className={styles.gameSectionContainerDiv}>
-      <PlayerCard playerKey={'player1'} isYourTurn={player1Turn} />
-      <div className={styles.gameBoardDiv}>
-        {NUMBEROFTILES.map((tile, index) => {
-          let tileKey = index.toString();
-          return <Tile tileNumber={index + 1} key={tileKey} />;
-        })}
+    <>
+      <ResultForeDrop />
+      <div className={styles.gameSectionContainerDiv}>
+        <PlayerCard playerKey={'player1'} isYourTurn={player1Turn} />
+        <div className={styles.gameBoardDiv}>
+          {NUMBEROFTILES.map((tile, index) => {
+            let tileKey = index.toString();
+            return <Tile tileNumber={index + 1} key={tileKey} />;
+          })}
+        </div>
+        <PlayerCard playerKey={'player2'} isYourTurn={!player1Turn} />
       </div>
-      <PlayerCard playerKey={'player2'} isYourTurn={!player1Turn} />
-    </div>
+    </>
   );
 };
 
