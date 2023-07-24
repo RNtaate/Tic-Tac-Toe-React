@@ -16,6 +16,7 @@ const winChecker = (movesArray) => {
   let middle;
   let last;
   let finalResult = false;
+  let winCombination = '';
 
   while (!finalResult && holder < movesArray.length - 2) {
     middle = holder + 1;
@@ -37,6 +38,7 @@ const winChecker = (movesArray) => {
         if (winMovesObject[currentMoveSet]) {
           // we have to update finalResult to true;
           finalResult = true;
+          winCombination = currentMoveSet.toString();
           break;
         }
         last = last + 1;
@@ -50,7 +52,7 @@ const winChecker = (movesArray) => {
     holder = holder + 1;
   }
 
-  return finalResult;
+  return { finalResult, winCombination };
 };
 
 export default winChecker;
