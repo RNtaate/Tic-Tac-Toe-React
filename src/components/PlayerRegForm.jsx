@@ -44,6 +44,7 @@ const PlayerRegForm = ({ setShowForm }) => {
             placeholder="Player 1's name"
             name="player1"
             autoComplete="off"
+            required
             onChange={(e) => setPlayer1Name(e.target.value)}
           />
           <input
@@ -51,6 +52,7 @@ const PlayerRegForm = ({ setShowForm }) => {
             placeholder="Player 2's name"
             name="player2"
             autoComplete="off"
+            required
             onChange={(e) => setPlayer2Name(e.target.value)}
           />
           <div
