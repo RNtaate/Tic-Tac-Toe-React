@@ -13,7 +13,11 @@ const Tile = ({ tileNumber }) => {
     setPlayer1Turn,
     setPlayer1Moves,
     setPlayer2Moves,
+    winCombination,
   } = context;
+
+  const shadeYellow =
+    winCombination && winCombination.includes(tileNumber.toString());
 
   const makeSelection = (e) => {
     e.stopPropagation();
@@ -55,8 +59,11 @@ const Tile = ({ tileNumber }) => {
     <div
       className={styles.tileContainerDiv}
       style={{
-        backgroundColor:
-          parseInt(tileNumber) % 2 != 0 ? 'var(--bg-secondary)' : 'transparent',
+        backgroundColor: shadeYellow
+          ? 'var(--bg-yellow)'
+          : parseInt(tileNumber) % 2 != 0
+          ? 'var(--bg-secondary)'
+          : 'transparent',
       }}
     >
       {combinedMoves[tileNumber.toString()] ? (
