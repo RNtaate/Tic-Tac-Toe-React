@@ -1,5 +1,7 @@
 # TIC-TAC-TOE (REACT)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/36ea6f85-860f-4fa6-82a2-f443ba670a56/deploy-status)](https://app.netlify.com/sites/norp-tictactoe/deploys)
+
 ## Project Description
 
 > This project is a Tic-Tac-Toe game, Single Page Web Application(SPA) built using `React JS` and `Vite`.
@@ -16,7 +18,7 @@
 
 ## 🔴 Live Demo
 
-- _**Coming Soon**_
+- [Tic Tac Toe](https://norp-tictactoe.netlify.app/)
 
 ### Screenshots
 
