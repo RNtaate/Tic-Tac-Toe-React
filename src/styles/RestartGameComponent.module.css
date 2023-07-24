@@ -1,0 +1,36 @@
+.restartGameContainerDiv {
+  width: 100%;
+  gap: 10px;
+}
+
+.restartGameContainerDiv > button {
+  border-radius: 5px;
+  flex: 1;
+}
+
+.restartGameButton,
+.quitGameButton {
+  background-color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.restartGameButton:hover {
+  color: var(--blue-primary);
+  background-color: transparent;
+  border: 2px solid var(--blue-primary);
+}
+
+.quitGameButton {
+  background-color: var(--pink-primary);
+  border: 2px solid var(--pink-primary);
+}
+
+.quitGameButton:hover {
+  color: var(--pink-primary);
+  background-color: transparent;
+  border: 2px solid var(--pink-primary);
+}

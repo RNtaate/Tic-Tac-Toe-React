@@ -1,0 +1,87 @@
+.formBackdropSection {
+  background-color: rgba(37, 39, 42, 0.7);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.formContainerDiv {
+  min-width: var(--min-dimension);
+  max-width: var(--max-dimension);
+  width: 100%;
+  background-color: rgba(34, 36, 39);
+  gap: 20px;
+  padding: 1em;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  animation: scalingUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scalingUp {
+  0% {
+    transform: translateY(150vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.formContainerDiv > h3 {
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  line-height: 1.3em;
+}
+
+.playersForm {
+  width: 100%;
+  gap: 10px;
+}
+
+.playersForm > input,
+.cancelButton,
+.submitButton {
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+}
+
+.playersForm > input {
+  outline: none;
+  border: none;
+  background-color: var(--bg-primary);
+  padding: 1em;
+  font-size: 14px;
+}
+
+.formButtonsDiv {
+  width: 100%;
+}
+
+.cancelButton,
+.submitButton {
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  padding: 1em;
+}
+
+.submitButton {
+  background-color: var(--blue-primary);
+}
+
+.cancelButton {
+  background-color: var(--pink-primary);
+}
+
+.submitButton:hover,
+.cancelButton:hover {
+  background-color: transparent;
+}
+
+.submitButton:hover {
+  border: 1px solid var(--blue-primary);
+}
+
+.cancelButton:hover {
+  border: 1px solid var(--pink-primary);
+}

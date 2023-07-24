@@ -1,0 +1,76 @@
+.welcomeMainSection {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.welcomeContainerDiv {
+  gap: 30px;
+}
+
+.welcomeHeading {
+  font-weight: 200;
+}
+
+.welcomeButtonsConatiner {
+  gap: 20px;
+}
+
+.playLink,
+.welcomeStartButton,
+.welcomeContinueButton {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.welcomeStartButton,
+.welcomeContinueButton {
+  padding: 0.5em 2em;
+  background: var(--blue-primary);
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  outline: 2px solid transparent;
+  outline-offset: 0;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.welcomeStartButton {
+  white-space: nowrap;
+}
+
+.welcomeContinueButton {
+  background-color: var(--pink-primary);
+}
+
+.welcomeStartButton:hover,
+.welcomeContinueButton:hover {
+  outline: 2px solid var(--blue-primary);
+  outline-offset: 5px;
+  box-shadow: none;
+  background: transparent;
+}
+
+.welcomeContinueButton:hover {
+  outline: 2px solid var(--pink-primary);
+}
+
+.chosenPlayersContainer {
+  gap: 100px;
+  background-color: var(--bg-secondary);
+  padding: 1em 3em;
+  border-radius: 4px;
+}
+
+.chosenPlayerDiv {
+  gap: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.chosenPlayerDiv > small {
+  font-size: 10px;
+}

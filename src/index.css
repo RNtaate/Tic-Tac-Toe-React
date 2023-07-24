@@ -1,5 +1,13 @@
 :root {
   --text-primary: #213547;
+  --text-white: rgb(215, 216, 216);
+  --bg-primary: rgb(37, 39, 42);
+  --bg-secondary: rgb(34, 36, 39);
+  --bg-lighter: #444;
+  --bg-light: #aaa;
+  --bg-yellow: rgb(254, 214, 82);
+  --blue-primary: rgb(42, 171, 252);
+  --pink-primary: rgb(238, 80, 123);
 
   --h1-font-size: 3.2em;
   --h2-font-size: 3em;
@@ -19,11 +27,48 @@
   padding: 0;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 h1 {
   font-size: var(--h1-font-size);
 }
 
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+button {
+  outline: none;
+  padding: 0.5em 1.5em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: var(--text-primary);
+  color: var(--text-white);
+  background-color: var(--bg-primary);
 }

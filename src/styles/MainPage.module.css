@@ -1,0 +1,54 @@
+:root {
+  --min-dimension: 320px;
+  --max-dimension: 350px;
+}
+
+.resultSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-primary);
+}
+
+.resultContainerDiv {
+  min-width: var(--min-dimension);
+  max-width: var(--max-dimension);
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  animation: scalingUp 0.3s ease-in-out forwards;
+}
+
+@keyframes scalingUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gameSectionContainerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  gap: 6em;
+}
+
+.gameBoardDiv {
+  display: grid;
+  min-width: var(--min-dimension);
+  max-width: var(--max-dimension);
+  aspect-ratio: 1 / 1;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}

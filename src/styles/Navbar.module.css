@@ -1,0 +1,16 @@
+.navBarHeader {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 2em 3em;
+}
+
+.logoDiv {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  margin-right: 0.5em;
+}
+
+.companyName {
+  color: var(--pink-primary);
+}
