@@ -24,12 +24,14 @@ const MainPage = () => {
     setDraw,
     setPlayer1Win,
     setPlayer2Win,
+    setWinCombination,
   } = context;
 
   useEffect(() => {
     let combinedMovesLength = Object.keys(combinedMoves).length;
     let player1WinChecker = false;
     let player2WinChecker = false;
+    let winCheckResults = null;
     if (
       combinedMovesLength > 0 &&
       (player1Moves.length > 2 || player2Moves.length > 2)
@@ -39,12 +41,20 @@ const MainPage = () => {
       if (player1Turn) {
         /**In this block, you should check for player2's win, hence reversing the roles for the player1Turn */
         // check for player 2 win
-        player2WinChecker = winChecker(player2Moves);
-        if (player2WinChecker) setPlayer2Win(player2WinChecker);
+        winCheckResults = winChecker(player2Moves);
+        player2WinChecker = winCheckResults.finalResult;
+        if (player2WinChecker) {
+          setPlayer2Win(player2WinChecker);
+          setWinCombination(winCheckResults.winCombination);
+        }
       } else {
         // check for player 1 win
-        player1WinChecker = winChecker(player1Moves);
-        if (player1WinChecker) setPlayer1Win(player1WinChecker);
+        winCheckResults = winChecker(player1Moves);
+        player1WinChecker = winCheckResults.finalResult;
+        if (player1WinChecker) {
+          setPlayer1Win(player1WinChecker);
+          setWinCombination(winCheckResults.winCombination);
+        }
       }
 
       if (
