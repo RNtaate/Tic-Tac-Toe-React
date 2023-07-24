@@ -5,7 +5,7 @@ import styles from '../styles/RestartGameComponent.module.css';
 
 const RestartGameComponent = () => {
   const context = useContext(TicContext);
-  const { resetGameValues } = context;
+  const { resetGameValues, hardReset } = context;
 
   return (
     <div
@@ -16,7 +16,15 @@ const RestartGameComponent = () => {
         onClick={resetGameValues}
         className={styles.restartGameButton}
       >
-        Restart Game
+        Restart game
+      </button>
+
+      <button
+        type="button"
+        onClick={hardReset}
+        className={`${styles.quitGameButton}`}
+      >
+        Quit game
       </button>
     </div>
   );

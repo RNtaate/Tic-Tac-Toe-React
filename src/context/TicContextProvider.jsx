@@ -45,6 +45,15 @@ const TicContextProvider = ({ children }) => {
     setDraw(initialStateValues.draw);
   };
 
+  const hardReset = () => {
+    setPlayers({
+      player1: '',
+      player2: '',
+    });
+
+    resetGameValues();
+  };
+
   const contextValue = {
     players,
     playerSymbols,
@@ -66,6 +75,7 @@ const TicContextProvider = ({ children }) => {
     setPlayer2Win,
     setDraw,
     resetGameValues,
+    hardReset,
   };
 
   return (
