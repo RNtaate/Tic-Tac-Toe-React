@@ -5,7 +5,7 @@ import styles from '../styles/PlayerCard.module.css';
 
 const PlayerCard = ({ playerKey, isYourTurn }) => {
   const context = useContext(TicContext);
-  const { playerSymbols, players } = context;
+  const { playerSymbols, players, player1Win, player2Win, draw } = context;
   const imageSymbol = playerSymbols[playerKey];
   const playerName = players[playerKey];
 
@@ -18,16 +18,18 @@ const PlayerCard = ({ playerKey, isYourTurn }) => {
           : 'var(--bg-secondary)',
       }}
     >
-      <span
-        className={`${styles.yourTurnSpan} ${
-          isYourTurn ? styles.turnActive : ''
-        } d-flex align-items-center justify-content-center`}
-      >
-        <span>
-          <i className="fa-solid fa-angle-right"></i>
+      {!(player1Win || player2Win || draw) && (
+        <span
+          className={`${styles.yourTurnSpan} ${
+            isYourTurn ? styles.turnActive : ''
+          } d-flex align-items-center justify-content-center`}
+        >
+          <span>
+            <i className="fa-solid fa-angle-right"></i>
+          </span>
+          <h3>Your turn!</h3>
         </span>
-        <h3>Your turn!</h3>
-      </span>
+      )}
 
       <span>
         <i className="fa-solid fa-user"></i>

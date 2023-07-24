@@ -22,7 +22,7 @@
 
 ### Demo Video
 
-https://github.com/RNtaate/Tic-Tac-Toe-React/assets/42064746/4078f811-5209-4530-b6bd-2f9e82befa00
+https://github.com/RNtaate/Tic-Tac-Toe-React/assets/42064746/3405b36b-4076-4c01-a0e7-632e11a0cc30
 
 ## Get started on local machine
 

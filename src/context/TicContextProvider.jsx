@@ -26,6 +26,9 @@ const TicContextProvider = ({ children }) => {
   const [combinedMoves, setCombinedMoves] = useState(
     initialStateValues.combinedMoves
   );
+  const [winCombination, setWinCombination] = useState(
+    initialStateValues.winCombination
+  );
   const [currentMove, setCurrentMove] = useState(
     initialStateValues.currentMove
   );
@@ -38,6 +41,7 @@ const TicContextProvider = ({ children }) => {
     setPlayer1Moves(initialStateValues.player1Moves);
     setPlayer2Moves(initialStateValues.player2Moves);
     setCombinedMoves(initialStateValues.combinedMoves);
+    setWinCombination(initialStateValues.winCombination);
     setCurrentMove(initialStateValues.currentMove);
     setPlayer1Turn(initialStateValues.player1Turn);
     setPlayer1Win(initialStateValues.player1Win);
@@ -60,6 +64,7 @@ const TicContextProvider = ({ children }) => {
     player1Moves,
     player2Moves,
     combinedMoves,
+    winCombination,
     currentMove,
     player1Turn,
     player1Win,
@@ -69,6 +74,7 @@ const TicContextProvider = ({ children }) => {
     setPlayer1Moves,
     setPlayer2Moves,
     setCombinedMoves,
+    setWinCombination,
     setCurrentMove,
     setPlayer1Turn,
     setPlayer1Win,
