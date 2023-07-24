@@ -9,7 +9,7 @@ const PlayerRegForm = ({ setShowForm }) => {
   const [player2Name, setPlayer2Name] = useState('');
 
   const context = useContext(TicContext);
-  const { setPlayers } = context;
+  const { setPlayers, resetGameValues } = context;
 
   const handleSettingPlayerNames = (e) => {
     e.preventDefault();
@@ -19,6 +19,8 @@ const PlayerRegForm = ({ setShowForm }) => {
       player1: player1Name.toUpperCase(),
       player2: player2Name.toUpperCase(),
     });
+
+    resetGameValues();
     setShowForm(false);
   };
 
