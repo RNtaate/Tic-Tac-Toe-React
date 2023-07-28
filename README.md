@@ -10,6 +10,10 @@
 
 > It was built to test out and have the feel of rendering the game on a webpage before moving on to creating its multiplayer version, and it follows a `Tic-Tac-Toe` game that was built to be rendered in a `terminal/console` which can be found [here](https://google.com)
 
+> #### Future Features:
+>
+> - Being able to choose between playing against a freind or playing against the computer.
+
 ## 🔧 Built with
 
 - ReactJS
